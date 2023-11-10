@@ -28,6 +28,35 @@
       transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     }
+
+    #fireworks {
+      display: none;
+    }
+
+    #fireworks {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+    }
+
+    .firework-particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff0000; /* couleur de la particule */
+      border-radius: 50%;
+      transform-origin: center;
+      transform: scale(0);
+      animation: explode 0.5s ease-out;
+    }
+
+    @keyframes explode {
+      to {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -38,6 +67,15 @@
   
   <button id="clickButton" onclick="incrementCounter()">Cliquez-moi</button>
 
+  <div id="fireworks">
+    <div class="firework-particle" style="left: 50%; top: 50%;"></div>
+    <div class="firework-particle" style="left: 40%; top: 40%;"></div>
+    <div class="firework-particle" style="left: 60%; top: 40%;"></div>
+    <div class="firework-particle" style="left: 40%; top: 60%;"></div>
+    <div class="firework-particle" style="left: 60%; top: 60%;"></div>
+  </div>  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
