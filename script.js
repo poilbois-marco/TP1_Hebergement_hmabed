@@ -1,10 +1,19 @@
 
+const button = document.querySelector('button');
+const counter = document.querySelector('#counter');
+
 let count = 0;
 
-function handleClick() {
+button.addEventListener('click', () => {
   count++;
-  console.log(`Button clicked ${count} times`);
-}
+  counter.textContent = count;
+  localStorage.setItem('clickCount', count);
+});
 
-const button = document.querySelector('button');
-button.addEventListener('click', handleClick);
+window.addEventListener('load', () => {
+  const clickCount = localStorage.getItem('clickCount');
+  if (clickCount) {
+    count = parseInt(clickCount);
+    counter.textContent = count;
+  }
+});
