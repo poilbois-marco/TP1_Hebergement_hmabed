@@ -1,15 +1,37 @@
-<!-- FILEPATH: /c:/Users/marco/OneDrive/Documents/MMI/Hebergement/TP1_Hebergement_hmabed/index.html -->
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Counter Button Example</title>
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <h1>Counter Button Example</h1>
-        <p>Click the button to increase the counter:</p>
-        <button>Click me!</button>
-        <p>Counter: <span id="counter">0</span></p>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compteur de clics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #counter {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #clickButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Compteur de clics</h1>
+  
+  <div id="counter">Clics : 0</div>
+  
+  <button id="clickButton" onclick="incrementCounter()">Cliquez-moi</button>
+
+  <script src="script.js"></script>
+</body>
 </html>
+
